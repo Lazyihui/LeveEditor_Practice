@@ -9,6 +9,10 @@ namespace LevelPractice
 
         public int id;
 
+        public int hp;
+
+        public int hpMax;
+
         public void TF_SetPos(Vector3 pos)
         {
             transform.position = pos;
