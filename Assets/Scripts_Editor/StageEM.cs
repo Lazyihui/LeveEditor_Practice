@@ -11,13 +11,15 @@ namespace LevelPractice
     {
 
         public int stageID;
-        public StageTM tm;
+        public StageSo so;
 
         [ContextMenu("Save")]
         public void Save()
         {
+
+            so.tm.typeID = stageID;
+            Debug.Log(so.tm.typeID);
             SaveGears();
-            Debug.Log("Save");
         }
 
         void SaveGears()
@@ -36,8 +38,8 @@ namespace LevelPractice
                 gearTMs[i] = em.tm;
             }
 
-            tm.gears = gearTMs;
-
+            so.tm.gears = gearTMs;
+            EditorUtility.SetDirty(so);
         }
 
 

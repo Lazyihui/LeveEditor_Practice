@@ -2,40 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Mian : MonoBehaviour
+
+namespace LevelPractice
 {
 
-    [SerializeField] int stage;
-
-
-
-    void Awake()
-    {
-        Debug.Log("Main Awake");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            EnterGame(stage);
-        }
-    }
-
-
-    void EnterGame(int stage)
+    public class Mian : MonoBehaviour
     {
 
-        Debug.Log("Main EnterGame" + stage);
-        if (stage == 1)
+        [SerializeField] int stage;
+
+        [SerializeField] AssetsCore assetsCore;
+
+        void Awake()
         {
 
+            assetsCore = new AssetsCore();
+            assetsCore.Ctor();
+            assetsCore.Init();
         }
-        else if (stage == 2)
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                EnterGame(stage);
+            }
+        }
+
+
+        void EnterGame(int stage)
         {
 
-        }
+            Debug.Log("Main EnterGame" + stage);
+            bool has =  assetsCore.Stage_TryGet(stage, out StageTM tm);
+            if(!has){
+                Debug.LogError("没有这个关卡");
+                return;
+            }
 
+            Debug.Log("创建关卡ID" + tm.typeID);
+
+        }
     }
 }

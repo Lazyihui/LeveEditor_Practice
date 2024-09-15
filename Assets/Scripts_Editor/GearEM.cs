@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace LevelPractice
 {
+    // EM , Editor Model
+    // TM , Template Model
+    // Entity (Model)
+
     public class GearEM : MonoBehaviour
     {
 

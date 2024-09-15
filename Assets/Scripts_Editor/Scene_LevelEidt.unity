@@ -164,6 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm:
+    typeID: 0
+    typeName: 
     moveSpeed: 5
     hpMax: 555
     modPrefab: {fileID: 0}
@@ -212,6 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm:
+    typeID: 0
+    typeName: 
     moveSpeed: 5
     hpMax: 555
     modPrefab: {fileID: 0}
@@ -260,6 +264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm:
+    typeID: 0
+    typeName: 
     moveSpeed: 5
     hpMax: 1
     modPrefab: {fileID: 0}
@@ -314,16 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4348be8d135c00443a1f084dd30e7818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageID: 11
-  tm:
-    stageID: 1
-    gears:
-    - moveSpeed: 5
-      hpMax: 1
-      modPrefab: {fileID: 0}
-    - moveSpeed: 6
-      hpMax: 1
-      modPrefab: {fileID: 0}
+  stageID: 55
+  so: {fileID: 11400000, guid: 427db07a3514d3b45971392a72f51c28, type: 2}
 --- !u!1 &1052344308
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm:
+    typeID: 0
+    typeName: 
     moveSpeed: 5
     hpMax: 555
     modPrefab: {fileID: 0}
@@ -417,6 +417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm:
+    typeID: 0
+    typeName: 
     moveSpeed: 5
     hpMax: 555
     modPrefab: {fileID: 0}
@@ -465,6 +467,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm:
+    typeID: 0
+    typeName: 
     moveSpeed: 6
     hpMax: 1
     modPrefab: {fileID: 0}
@@ -513,6 +517,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tm:
+    typeID: 0
+    typeName: 
     moveSpeed: 5
     hpMax: 555
     modPrefab: {fileID: 0}

@@ -9,7 +9,7 @@ namespace LevelPractice
     public struct StageTM
     {
 
-        public int stageID;
+        public int typeID;
 
         // 这样写是错的 要改
         public GearTM[] gears;
