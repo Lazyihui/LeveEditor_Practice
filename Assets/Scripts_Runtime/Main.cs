@@ -35,14 +35,20 @@ namespace LevelPractice
         {
 
             Debug.Log("Main EnterGame" + stage);
-            bool has =  assetsCore.Stage_TryGet(stage, out StageTM tm);
-            if(!has){
+            bool has = assetsCore.Stage_TryGet(stage, out StageTM tm);
+            if (!has)
+            {
                 Debug.LogError("没有这个关卡");
                 return;
             }
 
             Debug.Log("创建关卡ID" + tm.typeID);
-
+            GearSpawnerTM[] gearSpawners = tm.gearSpawners;
+            for (int i = 0; i < gearSpawners.Length; i++)
+            {
+                GearSpawnerTM gearSpawner = gearSpawners[i];
+                GearEntity entity = Factory.CreateGear(gearSpawner.so.tm.typeID, gearSpawner.position, gearSpawner.rotation);
+            }
         }
     }
 }

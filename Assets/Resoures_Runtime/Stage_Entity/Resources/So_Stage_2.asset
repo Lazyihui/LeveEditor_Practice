@@ -13,40 +13,15 @@ MonoBehaviour:
   m_Name: So_Stage_2
   m_EditorClassIdentifier: 
   tm:
-    stageID: 55
-    gears:
-    - typeID: 0
-      typeName: 
-      moveSpeed: 5
-      hpMax: 1
-      modPrefab: {fileID: 0}
-    - typeID: 0
-      typeName: 
-      moveSpeed: 6
-      hpMax: 1
-      modPrefab: {fileID: 0}
-    - typeID: 0
-      typeName: 
-      moveSpeed: 5
-      hpMax: 555
-      modPrefab: {fileID: 0}
-    - typeID: 0
-      typeName: 
-      moveSpeed: 5
-      hpMax: 555
-      modPrefab: {fileID: 0}
-    - typeID: 0
-      typeName: 
-      moveSpeed: 5
-      hpMax: 555
-      modPrefab: {fileID: 0}
-    - typeID: 0
-      typeName: 
-      moveSpeed: 5
-      hpMax: 555
-      modPrefab: {fileID: 0}
-    - typeID: 0
-      typeName: 
-      moveSpeed: 5
-      hpMax: 555
-      modPrefab: {fileID: 0}
+    typeID: 55
+    gearSpawners:
+    - so: {fileID: 11400000, guid: edddcf7c5f916194bbe5e5e6055e69dc, type: 2}
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0, y: 0, z: 0}
+      isHpMaxModifiable: 0
+      hpMax: 0
+    - so: {fileID: 11400000, guid: 246633036a4792f40b93b54116eb3933, type: 2}
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0, y: 0, z: 0}
+      isHpMaxModifiable: 0
+      hpMax: 0
