@@ -10,9 +10,7 @@ namespace LevelPractice
     {
 
         public int typeID;
-
-        // 这样写是错的 要改
-        public GearTM[] gears;
+        public GearSpawnerTM[] gearSpawners;
     }
 
 }

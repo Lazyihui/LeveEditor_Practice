@@ -26,19 +26,19 @@ namespace LevelPractice
         {
             // 查找所有的GearEM (EM)然后保存，
 
-            GearEM[] gearEMs = GetComponentsInChildren<GearEM>();
+            GearSpawnEM[] gearEMs = GetComponentsInChildren<GearSpawnEM>();
             // 保存到TM里面
-            GearTM[] gearTMs = new GearTM[gearEMs.Length];
+            GearSpawnerTM[] gearTMs = new GearSpawnerTM[gearEMs.Length];
 
             for (int i = 0; i < gearTMs.Length; i++)
             {
-                GearEM em = gearEMs[i];
+                GearSpawnEM em = gearEMs[i];
                 em.Save();
 
-                gearTMs[i] = em.tm;
+                gearTMs[i] = em.spawnerTM;
             }
 
-            so.tm.gears = gearTMs;
+            so.tm.gearSpawners = gearTMs;
             EditorUtility.SetDirty(so);
         }
 

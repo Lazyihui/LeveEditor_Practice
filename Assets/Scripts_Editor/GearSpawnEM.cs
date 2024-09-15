@@ -7,10 +7,10 @@ namespace LevelPractice
     // TM , Template Model
     // Entity (Model)
 
-    public class GearEM : MonoBehaviour
+    public class GearSpawnEM : MonoBehaviour
     {
 
-        public GearTM tm;
+        public GearSpawnerTM spawnerTM;
 
         [ContextMenu("Save")]
 
