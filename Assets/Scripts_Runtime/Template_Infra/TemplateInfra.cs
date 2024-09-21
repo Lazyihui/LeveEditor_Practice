@@ -16,8 +16,8 @@ public static class TemplateInfra {
             labelReference.labelString = "TM_Player";
             var ptr = Addressables.LoadAssetsAsync<PlayerTM>(labelReference, null);
             var list = ptr.WaitForCompletion();
-            foreach (var go in list) {
-                ctx.player.Add(go.typeID, go);
+            foreach (var so in list) {
+                ctx.player.Add(so.typeID, so);
             }
             ctx.playerPtr = ptr;
 
