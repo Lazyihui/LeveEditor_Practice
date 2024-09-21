@@ -10,14 +10,17 @@ public class MainContext {
 
     public GameContext gameContext;
 
+    public TemplateContext templateContext;
+
 
     public MainContext() {
         assetsContext = new AssetsContext();
         gameContext = new GameContext();
+        templateContext = new TemplateContext();
     }
 
     public void Inject() {
-        gameContext.Inject(assetsContext);
+        gameContext.Inject(assetsContext,templateContext);
     }
 
 

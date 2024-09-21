@@ -88,6 +88,7 @@ MonoBehaviour:
     m_LabelNames:
     - default
     - Entity
+    - TM_Player
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 028d4ca6a2f80b5468427a9f34e32dd6, type: 2}

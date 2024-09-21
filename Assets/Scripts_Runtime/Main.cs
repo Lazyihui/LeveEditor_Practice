@@ -14,6 +14,7 @@ public class Main : MonoBehaviour {
         ctx.Inject();
 
         ModuleAssets.Load(ctx.assetsContext);
+        TemplateInfra.Load(ctx.templateContext);
 
 
 
@@ -23,6 +24,10 @@ public class Main : MonoBehaviour {
     }
 
     void Update() {
+
+        float dt = Time.deltaTime;
+
+        Game_Business.Tick(ctx.gameContext, dt);
 
     }
 
@@ -43,6 +48,6 @@ public class Main : MonoBehaviour {
         isTearDown = true;
 
         ModuleAssets.Unload(ctx.assetsContext);
-
+        TemplateInfra.Unload(ctx.templateContext);
     }
 }
