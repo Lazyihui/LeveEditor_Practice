@@ -13,11 +13,12 @@ public static class TemplateInfra {
     public static void Load(TemplateContext ctx) {
         {
             AssetLabelReference labelReference = new AssetLabelReference();
-            labelReference.labelString = "TM_Player";
-            var ptr = Addressables.LoadAssetsAsync<PlayerTM>(labelReference, null);
+            labelReference.labelString = "So_Player";
+            var ptr = Addressables.LoadAssetsAsync<PlayerSo>(labelReference, null);
             var list = ptr.WaitForCompletion();
             foreach (var so in list) {
-                ctx.player.Add(so.typeID, so);
+                var tm = so.tm;
+                ctx.player.Add(tm.typeID, tm);
             }
             ctx.playerPtr = ptr;
 
