@@ -12,9 +12,13 @@ public class GameContext {
     // repository
     public PlayerRespository playerRespository;
 
+    public GroundRespository groundRespository;
     public GameContext() {
-        playerRespository = new PlayerRespository();
         gameEntity = new GameEntity();
+
+        playerRespository = new PlayerRespository();
+        groundRespository = new GroundRespository();
+
     }
 
     public void Inject(AssetsContext assetsContext, TemplateContext templateContext) {

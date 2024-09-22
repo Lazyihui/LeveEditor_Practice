@@ -23,6 +23,18 @@ public static class TemplateInfra {
             ctx.playerPtr = ptr;
 
         }
+
+        {
+            AssetLabelReference labelReference = new AssetLabelReference();
+            labelReference.labelString = "So_Ground";
+            var ptr = Addressables.LoadAssetsAsync<GroundSo>(labelReference, null);
+            var list = ptr.WaitForCompletion();
+            foreach (var so in list) {
+                var tm = so.tm;
+                ctx.ground.Add(tm.typeID, tm);
+            }
+            ctx.groundPtr = ptr;
+        }
     }
 
 

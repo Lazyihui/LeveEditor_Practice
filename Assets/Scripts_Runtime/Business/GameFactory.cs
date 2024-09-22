@@ -24,10 +24,31 @@ public static class GameFactory {
 
         entity.SetColor(tm.color);
 
+        return entity;
 
+    }
+
+    public static GroundEntity Ground_Create(GameContext ctx,  int typeID) {
+
+        ctx.assetsContext.TryGetEntity("GroundEntity", out GameObject prefab);
+
+        bool has = ctx.templateContext.ground.TryGetValue(typeID, out GroundTM tm);
+        if(!has) {
+            Debug.LogError("GroundTM not found");
+            return null;
+        }
+
+        GameObject go = GameObject.Instantiate(prefab);
+        GroundEntity entity = go.GetComponent<GroundEntity>();
+
+        entity.Ctor();
+        entity.typeID = typeID;
+        entity.id = ctx.gameEntity.groundRecordID++;
+
+        entity.SetColor(tm.color);
 
         return entity;
 
-
     }
+
 }

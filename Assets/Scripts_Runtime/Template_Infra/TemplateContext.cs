@@ -13,9 +13,13 @@ public class TemplateContext {
 
     public AsyncOperationHandle playerPtr;
 
+    public Dictionary<int, GroundTM> ground;
+
+    public AsyncOperationHandle groundPtr;
 
     public TemplateContext() {
         player = new Dictionary<int, PlayerTM>();
+        ground = new Dictionary<int, GroundTM>();
     }
 
 
