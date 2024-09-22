@@ -35,12 +35,26 @@ public static class TemplateInfra {
             }
             ctx.groundPtr = ptr;
         }
+
+        {
+            AssetLabelReference labelReference = new AssetLabelReference();
+            labelReference.labelString = "So_Stage";
+            var ptr = Addressables.LoadAssetsAsync<StageSo>(labelReference, null);
+            var list = ptr.WaitForCompletion();
+            foreach (var so in list) {
+                var tm = so.tm;
+                ctx.stage.Add(tm.typeID, tm);
+            }
+        }
     }
 
 
     public static void Unload(TemplateContext ctx) {
         if (ctx.playerPtr.IsValid()) {
             Addressables.Release(ctx.playerPtr);
+        }
+        if (ctx.groundPtr.IsValid()) {
+            Addressables.Release(ctx.groundPtr);
         }
     }
 

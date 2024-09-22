@@ -17,9 +17,14 @@ public class TemplateContext {
 
     public AsyncOperationHandle groundPtr;
 
+    public Dictionary<int,StageTM> stage;
+
+    public AsyncOperationHandle stagePtr;
+
     public TemplateContext() {
         player = new Dictionary<int, PlayerTM>();
         ground = new Dictionary<int, GroundTM>();
+        stage = new Dictionary<int, StageTM>();
     }
 
 
