@@ -7,4 +7,5 @@ public class StageSo : ScriptableObject {
 
     public StageTM tm;
 
+
 }

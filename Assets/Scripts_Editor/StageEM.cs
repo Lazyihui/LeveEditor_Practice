@@ -26,10 +26,21 @@ public class StageEM : MonoBehaviour {
 
         Debug.Log("Save");
 
+        SavePlayer();
+
     }
 
     public void SavePlayer() {
-        PlayerSpawnEM[] gearEMs = GetComponentsInChildren<PlayerSpawnEM>();
+        PlayerSpawnEM[] playersEM = GetComponentsInChildren<PlayerSpawnEM>();
+        PlayerSpawnTM[] playersTM = new PlayerSpawnTM[playersEM.Length];
+        for (int i = 0; i < playersTM.Length; i++) {
+            PlayerSpawnEM em = playersEM[i];
+
+            em.Save();
+            playersTM[i] = em.spawnerTM;
+        }
+        so.tm.players = playersTM;
+        EditorUtility.SetDirty(so);
     }
 
 }

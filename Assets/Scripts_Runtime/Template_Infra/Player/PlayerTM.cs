@@ -2,8 +2,9 @@ using System;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "PlayerTM_", menuName = "Template/PlayerTM")]
-public class PlayerTM : ScriptableObject {
+
+[Serializable]
+public class PlayerTM {
     public int typeID;
 
     public int hp;
@@ -13,6 +14,8 @@ public class PlayerTM : ScriptableObject {
     [Header("color")]
 
     public Color color;
+
+    public GameObject modPrefab;
 
 
 }

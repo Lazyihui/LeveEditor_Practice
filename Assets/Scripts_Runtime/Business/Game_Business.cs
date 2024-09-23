@@ -5,9 +5,10 @@ using UnityEngine;
 
 public static class Game_Business {
     public static void Enter(GameContext ctx) {
-        GroundDomain.Spawn(ctx, 1);
+        
+        // GroundDomain.Spawn(ctx, 1);
 
-        PlayerDomain.Spawn(ctx, new Vector3(0, 1, 0), 1);
+        // PlayerDomain.Spawn(ctx, new Vector3(0, 1, 0), 1);
     }
 
 
