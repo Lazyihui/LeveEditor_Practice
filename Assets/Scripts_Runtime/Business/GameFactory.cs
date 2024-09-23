@@ -3,12 +3,15 @@ using UnityEngine;
 
 
 public static class GameFactory {
-    public static PlayerEntity Player_Create(GameContext ctx, Vector3 pos, int typeID) {
+    public static PlayerEntity Player_Create(GameContext ctx, int typeID, PlayerSpawnTM spawnTM) {
 
         ctx.assetsContext.TryGetEntity("PlayerEntity", out GameObject prefab);
 
-        bool has = ctx.templateContext.player.TryGetValue(typeID, out PlayerTM tm);
-        if(!has) {
+
+        PlayerTM tm;
+
+        bool has = ctx.templateContext.player.TryGetValue(typeID, out tm);
+        if (!has) {
             Debug.LogError("PlayerTM not found");
             return null;
         }
@@ -16,24 +19,29 @@ public static class GameFactory {
         GameObject go = GameObject.Instantiate(prefab);
         PlayerEntity entity = go.GetComponent<PlayerEntity>();
 
+        entity.TF_SetPosition(spawnTM.position);
+        entity.TF_SetRotation(spawnTM.rotation);
+
+        GameObject mod = GameObject.Instantiate(tm.modPrefab, entity.body);
+
         entity.Ctor();
         entity.typeID = typeID;
         entity.id = ctx.gameEntity.playerRecordID++;
         entity.hp = tm.hp;
         entity.hpMax = tm.hpMax;
 
-        entity.SetColor(tm.color);
+        // entity.SetColor(tm.color);
 
         return entity;
 
     }
 
-    public static GroundEntity Ground_Create(GameContext ctx,  int typeID) {
+    public static GroundEntity Ground_Create(GameContext ctx, int typeID) {
 
         ctx.assetsContext.TryGetEntity("GroundEntity", out GameObject prefab);
 
         bool has = ctx.templateContext.ground.TryGetValue(typeID, out GroundTM tm);
-        if(!has) {
+        if (!has) {
             Debug.LogError("GroundTM not found");
             return null;
         }

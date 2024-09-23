@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tm:
     typeName: caps
-    typeID: 4575
+    typeID: 2
     hp: 100
     hpMax: 0
     color: {r: 0.45600337, g: 0.81886786, b: 0.4001637, a: 0}

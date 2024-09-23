@@ -26,18 +26,9 @@ public class TemplateContext {
         ground = new Dictionary<int, GroundTM>();
         stage = new Dictionary<int, StageTM>();
     }
-    public bool Stage_TryGet(int typeID, out StageSo so) {
 
-        StageTM tm;
-        if (stage.TryGetValue(typeID, out tm)) {
-            so = new StageSo();
-            so.tm = tm;
-            return true;
-        } else {
-            so = default;
-            return false;
-        }
-
+    public bool Stage_TryGet(int typeID, out StageTM tm) {
+        return stage.TryGetValue(typeID, out tm);
     }
 
 }

@@ -15,12 +15,9 @@ MonoBehaviour:
   tm:
     typeID: 1
     players:
-    - so: {fileID: 11400000, guid: 9db74df0b1fea8b4f95ea3a9a46b6824, type: 2}
+    - so: {fileID: 11400000, guid: 62684748fa324db4ea3a122fa0acfa74, type: 2}
       position: {x: 0.905967, y: -0.10657215, z: -0.63569236}
       rotation: {x: -0, y: 0, z: 0}
-    - so: {fileID: 11400000, guid: 950ba333930310f4cae7edbeae2923a7, type: 2}
-      position: {x: -6.99, y: 0, z: 2.86}
-      rotation: {x: -0, y: 0, z: 0}
-    - so: {fileID: 11400000, guid: 62684748fa324db4ea3a122fa0acfa74, type: 2}
-      position: {x: 0, y: 0.83, z: -3.67}
+    - so: {fileID: 11400000, guid: 9db74df0b1fea8b4f95ea3a9a46b6824, type: 2}
+      position: {x: 0.905967, y: -0.10657215, z: -0.63569236}
       rotation: {x: -0, y: 0, z: 0}

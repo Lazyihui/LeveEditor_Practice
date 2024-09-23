@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tm:
     typeName: cube
-    typeID: 454577
+    typeID: 1
     hp: 2352
     hpMax: 543
     color: {r: 0, g: 0, b: 0, a: 0}
-    modPrefab: {fileID: 6837369823851087355, guid: 159ec86f3be8e344481568b4701301e0, type: 3}
+    modPrefab: {fileID: 1904564741272399879, guid: 0ed5fcf0be94d984ab9675ce035c63d2, type: 3}
