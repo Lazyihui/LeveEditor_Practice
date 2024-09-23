@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8476bf3ef4a48d4a8dc3e2f02603391, type: 3}
-  m_Name: So_Player_2
+  m_Name: So_Player_3
   m_EditorClassIdentifier: 
   tm:
-    typeName: caps
+    typeName: plane
     typeID: 4575
     hp: 100
     hpMax: 0
     color: {r: 0.45600337, g: 0.81886786, b: 0.4001637, a: 0}
-    modPrefab: {fileID: 7292086476167081227, guid: e57d761016f9224429f9f362243a8820, type: 3}
+    modPrefab: {fileID: 1219474299297404309, guid: cd2972efaa565e14f9b32d40e27616b3, type: 3}

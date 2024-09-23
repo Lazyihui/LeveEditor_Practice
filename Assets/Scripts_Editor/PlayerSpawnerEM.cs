@@ -24,7 +24,7 @@ public class PlayerSpawnEM : MonoBehaviour {
             Debug.Log(mod.name);
         }
 
-        string n = "Player_" + tm.typeID;
+        string n = "player_" + tm.typeName;
         if (gameObject.name != n) {
             gameObject.name = n;
         }

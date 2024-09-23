@@ -47,6 +47,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - So_Player
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9db74df0b1fea8b4f95ea3a9a46b6824
+    m_Address: So_Player_3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - So_Player
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 810b9041b18feea4ca4c6aee29d92f85, type: 2}
   m_SchemaSet:
