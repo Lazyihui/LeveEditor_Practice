@@ -1,18 +1,18 @@
 using System;
 using UnityEngine;
+using UnityEditor;
 
-
+[ExecuteInEditMode]
 public class PlayerSpawnEM : MonoBehaviour {
 
     public PlayerSpawnTM spawnerTM;
 
 
-    void Upate() {
+    void Update() {
         var so = spawnerTM.so;
         if (so == null) {
             return;
         }
-
         var tm = so.tm;
         var prefab = tm.modPrefab;
         if (prefab == null) {

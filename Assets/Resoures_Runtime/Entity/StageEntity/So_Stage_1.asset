@@ -15,12 +15,6 @@ MonoBehaviour:
   tm:
     typeID: 1
     players:
-    - so: {fileID: 0}
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: -0, y: 0, z: 0}
     - so: {fileID: 11400000, guid: 62684748fa324db4ea3a122fa0acfa74, type: 2}
-      position: {x: 0, y: 0, z: 0}
-      rotation: {x: -0, y: 0, z: 0}
-    - so: {fileID: 0}
       position: {x: 0, y: 0, z: 0}
       rotation: {x: -0, y: 0, z: 0}

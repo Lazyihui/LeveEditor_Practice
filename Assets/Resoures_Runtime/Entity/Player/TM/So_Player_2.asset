@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8476bf3ef4a48d4a8dc3e2f02603391, type: 3}
-  m_Name: So_Player_1
+  m_Name: So_Player_2
   m_EditorClassIdentifier: 
   tm:
-    typeID: 1
-    hp: 2352
-    hpMax: 543
-    color: {r: 0, g: 0, b: 0, a: 0}
-    modPrefab: {fileID: 6837369823851087355, guid: 159ec86f3be8e344481568b4701301e0, type: 3}
+    typeID: 0
+    hp: 100
+    hpMax: 0
+    color: {r: 0.45600337, g: 0.81886786, b: 0.4001637, a: 0}
+    modPrefab: {fileID: 7292086476167081227, guid: e57d761016f9224429f9f362243a8820, type: 3}
